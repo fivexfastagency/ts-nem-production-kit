@@ -1,0 +1,12 @@
+{
+  "name": "ts-nem-production-kit",
+  "version": "1.0.0",
+  "description": "Sarter kit for production setup of Nodejs, typescript, express and mongodb",
+  "license": "ISC",
+  "author": "\"Fivexfast\"",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
