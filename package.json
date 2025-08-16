@@ -1,35 +1,40 @@
 {
-  "name": "ts-nem-production-kit",
-  "version": "1.0.0",
-  "description": "Sarter kit for production setup of Nodejs, typescript, express and mongodb",
-  "license": "ISC",
-  "author": "\"Fivexfast\"",
-  "type": "commonjs",
-  "main": "src/server.js",
-  "scripts": {
-    "dist": "npx tsc",
-    "dev": "nodemon src/server.ts",
-    "start": "node dist/server.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "*.ts": [
-      "npm run lint:fix"
-    ]
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@eslint/js": "^9.33.0",
-    "@types/node": "^24.3.0",
-    "eslint": "^9.33.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.5",
-    "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2",
-    "typescript-eslint": "^8.39.1"
-  }
+    "name": "ts-nem-production-kit",
+    "version": "1.0.0",
+    "description": "Sarter kit for production setup of Nodejs, typescript, express and mongodb",
+    "license": "ISC",
+    "author": "\"Fivexfast\"",
+    "type": "commonjs",
+    "main": "src/server.js",
+    "scripts": {
+        "dist": "npx tsc",
+        "dev": "nodemon src/server.ts",
+        "start": "node dist/server.js",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "format:check": "prettier --check .",
+        "format:fix": "prettier . --fix",
+        "prepare": "husky"
+    },
+    "lint-staged": {
+        "*.ts": [
+            "npm run lint:fix",
+            "npm run format:fix"
+        ]
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
+        "@eslint/js": "^9.33.0",
+        "@types/node": "^24.3.0",
+        "eslint": "^9.33.0",
+        "eslint-config-prettier": "^10.1.8",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.5",
+        "nodemon": "^3.1.10",
+        "prettier": "3.6.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.39.1"
+    }
 }
